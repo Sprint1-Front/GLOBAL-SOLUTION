@@ -8,11 +8,22 @@
 }
 
 /* =======================
+    CONFIGURAÇÃO DE CORES DA MARCA (TalentForge)
+======================= */
+:root {
+    --color-main: #3498DB;
+    --color-accent: #E74C3C; 
+    --color-text-dark: #2C3E50;
+    --color-text-light: #ffffff;
+    --color-background: #f2f1ef;
+}
+
+/* =======================
     ESTILOS GERAIS
 ======================= */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-color: var(--color-background);
     color: #333;
 }
 
@@ -26,11 +37,31 @@ a {
 ======================= */
 
 header {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-background);
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.header-section {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+nav li a {
+    text-decoration: var(--color-text-dark);
+    list-style: none;
+    text-transform: uppercase;
 }
