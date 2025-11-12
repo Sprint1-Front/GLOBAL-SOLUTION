@@ -504,4 +504,9 @@ header {
         justify-content: flex-start;
         padding-bottom: 30px;
     }
+
+    .feature-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
 }
