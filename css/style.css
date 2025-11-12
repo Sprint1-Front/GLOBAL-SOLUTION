@@ -60,8 +60,54 @@ header {
     max-width: 800px;
 }
 
-nav li a {
-    text-decoration: var(--color-text-dark);
+.menu-list li a {
     list-style: none;
     text-transform: uppercase;
+    font-size: 1rem;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    text-transform: uppercase;
 }
+
+.menu-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 25px;
+}
+
+.menu-list li a:hover {
+    color: var(--color-accent);
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-main);
+}
+
+/* --- Botões de Ação (Login/Signup) --- */
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.header-actions button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn {
+    border: 1px solid var(--color-main);
+    color: var(--color-main);
+    text-transform: uppercase;
+}
+
