@@ -1,21 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <title>TalentForge</title>
 </head>
+
 <body>
-    <header>
-        <nav>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">TalentForge</a>
+        </div>
+        <nav class="main-nav">
+            <div class="btn-toggle-nav" onclick="toggleNav()"><h1>Toggle</h1></div>
             <ul class="menu">
                 <li><a href="index.html">Início</a></li>
                 <li><a href="sobre.html">Sobre Nós</a></li>
                 <li><a href="servicos.html">Integrantes</a></li>
                 <li><a href="contato.html">Contato</a></li>
+            </ul>    
+                <div class="btn">
+                    <button class="btn-login">Login</button>
+                    <button class="btn-signup">Sign Up</button>
+                </div>
+
+                <aside class="nav-asside">
+                    <ul>
+                        <li><a href="">Sobre Nós</a></li>
+                        <li><a href="">Integrantes</a></li>
+                        <li><a href="">Contato</a></li>
+                        <li><a href="">NÃO CLIQUE!!!</a></li>
+                    </ul>
+                </aside>
             </ul>
         </nav>
     </header>
 </body>
+
 </html>
