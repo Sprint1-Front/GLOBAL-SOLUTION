@@ -240,6 +240,25 @@ header {
     color: var(--color-main);
 }
 
+/* ===================================================
+    ESTILOS DA SEÇÃO DESTAQUES (FEATURES)
+=================================================== */
+
+.features-section {
+    padding: 80px 10%;
+    background-color: #f7f3ed;
+    text-align: center;
+}
+
+.section-title {
+    font-family: var(--font-sans);
+    font-size: 1.5rem;
+    color: var(--color-text-dark);
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+
 /* =============================
         FOOTER
 =============================*/
