@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>TalentForge</title>
+    <link rel="stylesheet" href="./css/style.css"> 
+    <title>TalentForge | Forjando o Futuro do Trabalho com IA</title>
 </head>
 
 <body>
@@ -13,30 +13,49 @@
         <div class="logo">
             <a href="index.html">TalentForge</a>
         </div>
-        <nav class="main-nav">
-            <div class="btn-toggle-nav" onclick="toggleNav()"><h1>Toggle</h1></div>
-            <ul class="menu">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre Nós</a></li>
-                <li><a href="servicos.html">Integrantes</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>    
-                <div class="btn">
-                    <button class="btn-login">Login</button>
-                    <button class="btn-signup">Sign Up</button>
-                </div>
+        
+        <button class="btn-toggle-nav" onclick="toggleNav()">
+            <span class="hamburguer-icon"></span> 
+        </button>
 
-                <aside class="nav-asside">
-                    <ul>
-                        <li><a href="">Sobre Nós</a></li>
-                        <li><a href="">Integrantes</a></li>
-                        <li><a href="">Contato</a></li>
-                        <li><a href="">NÃO CLIQUE!!!</a></li>
-                    </ul>
-                </aside>
+        <nav class="main-nav" id="main-menu">
+            <ul class="menu-list">
+                <li><a href="./index.html">Início</a></li>
+                <li><a href="./pages/mapa-de-carreira.html">Mapa IA</a></li>
+                <li><a href="./pages/assistente-ia.html">Assistente</a></li>
+                <li><a href="./pages/sobre.html">Sobre</a></li>
+                <li><a href="./pages/integrantes.html">Equipe</a></li>
+                <li><a href="./pages/faq.html">FAQ</a></li>
+                <li><a href="./pages/contato.html">Contato</a></li>
             </ul>
+
+            <div class="header-actions">
+                <button class="btn-login">Login</button>
+                <button class="btn-signup">Sign Up</button>
+            </div>
         </nav>
     </header>
+
+    <main class="hero-section">
+        <div class="hero-content">
+            <h1>O Seu Talento. O Nosso Futuro.</h1>
+            <p class="subtitle">
+                Reinvente sua carreira com jornadas de aprendizagem personalizadas pela Inteligência Artificial.
+                Estamos forjando o futuro do trabalho, um skill por vez.
+            </p>
+            <div class="hero-actions">
+                <a href="./pages/mapa-de-carreira.html" class="btn btn-primary">
+                    Descubra Seu Mapa de Carreira IA
+                </a>
+                <a href="./pages/sobre.html" class="btn btn-secondary">
+                    Conheça a TalentForge
+                </a>
+            </div>
+        </div>
+        
+        </main>
+
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
