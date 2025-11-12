@@ -291,6 +291,18 @@ header {
     margin: 20px;
 }
 
+.feature-link {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.feature-link:hover {
+    color: var(--color-accent);
+}
+
 /* =============================
         FOOTER
 =============================*/
@@ -321,6 +333,7 @@ header {
 .footer-links a:hover {
     color: var(--color-accent);
 }
+
 /* ===================================================
     PAGINA - SOBRE (DESKTOP)
 =================================================== */
