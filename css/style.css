@@ -21,6 +21,7 @@
 /* ===================================================
     ESTILOS GERAIS
 =================================================== */
+
 body {
     font-family: var(--font-serif);
     background-color: var(--color-background);
@@ -130,22 +131,28 @@ header {
 }
 
 .hamburguer-img-icon {
-    width: 30px;
-    height: 30px;
-    display: block;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
+    display: block;
 }
 
 .btn-toggle-nav {
     display: none;
-    width: 40px; 
-    height: 40px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
     padding: 0; 
+    z-index: 1001;
+    position: relative;
+    width: 40px; 
+    height: 40px; 
     line-height: 1; 
 }
 
 .hamburguer-icon::before,
 .hamburguer-icon::after {
+    display: none;
     content: '';
     position: absolute;
     width: 25px;
@@ -160,6 +167,17 @@ header {
 
 .hamburguer-icon::after {
     transform: translateY(8px);
+}
+
+.contatos img {
+    height: 25px;
+    width: auto;
+    transition: opacity 0.2s;
+    gap: 60px;
+}
+
+.contatos img:hover {
+    opacity: 0.7;
 }
 
 /* ===================================================
@@ -221,6 +239,37 @@ header {
 .minimal-actions a:hover {
     color: var(--color-main);
 }
+
+/* =============================
+        FOOTER
+=============================*/
+
+.main-footer {
+    background-color: var(--color-background);
+    padding: 30px 10%;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    font-family: var(--font-sans);
+    color: var(--color-main);
+}
+
+.main-footer p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.footer-links a {
+    color: var(--color-text-dark);
+    margin: 0 8px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    transition: color 0.2s;
+    text-transform: uppercase;
+}
+
+.footer-links a:hover {
+    color: var(--color-accent);
+}
 /* ===================================================
     PAGINA - SOBRE (DESKTOP)
 =================================================== */
@@ -249,6 +298,60 @@ header {
     color: var(--color-main);
     margin-right: 5px;
 }
+
+.section p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #444;
+    margin-top: 20px;
+}
+
+.section ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 30px;
+}
+
+.section ul li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 25px;
+    color: var(--color-text-dark);
+}
+
+.section ul li::before {
+    content: "•";
+    color: var(--color-main);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    position: absolute;
+    left: 0;
+}
+
+.section ul li sup {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: var(--color-accent);
+}
+
+/* --- RESPONSIVIDADE (MOBILE) PAGINA SOBRE --- */
+
+@media (max-width: 991px) {
+    .section h1 {
+        font-size: 1.8rem;
+    }
+    .section p, .section ul li {
+        font-size: 1rem;
+    }
+}
+
+/*===========================
+    FIM PAGINA SOBRE
+============================= */
 
 /* ===================================================
     RESPONSIVIDADE (MOBILE)
