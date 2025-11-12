@@ -66,8 +66,10 @@ header {
     font-size: 1rem;
     padding: 5px 0;
     transition: color 0.3s ease;
+
     text-decoration: none;
     text-transform: uppercase;
+
 }
 
 .menu-list {
@@ -110,4 +112,3 @@ header {
     color: var(--color-main);
     text-transform: uppercase;
 }
-
