@@ -11,20 +11,23 @@
     CONFIGURAÇÃO DE CORES DA MARCA (TalentForge)
 ======================= */
 :root {
-    --color-main: #3498DB;
-    --color-accent: #E74C3C; 
-    --color-text-dark: #2C3E50;
+    --color-main: #667085;
+    --color-accent: #B22222;
+    --color-text-dark: #2c3e50;
     --color-text-light: #ffffff;
-    --color-background: #f2f1ef;
+    --color-background: #fcfaf7;
+
+    --font-serif: 'Times New Roman', Times, serif;
+    --font-sans: 'Arial', sans-serif;
 }
 
 /* =======================
     ESTILOS GERAIS
 ======================= */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: var(--font-serif);
     background-color: var(--color-background);
-    color: #333;
+    color: var(--color-text-dark);
 }
 
 a {
@@ -35,6 +38,11 @@ a {
 /* =======================
     ESTILOS DO CABEÇALHO
 ======================= */
+
+.header .main-nav {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+}
 
 header {
     background-color: var(--color-background);
@@ -54,6 +62,13 @@ header {
     text-align: center;
     padding: 40px 20px;
 
+}
+.highlit {
+    font-style: italic;
+    text-decoration: underline;
+    text-decoration-color: rgba(44, 62, 80, 0.3);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
 }
 
 .hero-content {
