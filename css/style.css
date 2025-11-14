@@ -468,6 +468,38 @@ header {
 }
 
 /* ===================================================
+    ESTILOS DA PÁGINA CONTATO
+=================================================== */
+
+.contact-section {
+    padding: 80px 10%;
+    min-height: 85vh;
+}
+
+.contact-container {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-section .page-title {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.contact-section .subtitle {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.contact-form {
+    
+}
+
+/* ===================================================
     RESPONSIVIDADE (MOBILE)
 =================================================== */
 
