@@ -647,7 +647,6 @@ header {
 
 .member-card {
     padding: 25px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 8px;
     transition: box-shadow 0.3s ease;
 }
@@ -695,7 +694,7 @@ header {
     font-family: var(--font-sans);
     font-size: 0.9rem;
     font-weight: bold;
-    color: var(--color-accent);
+    color: var(--color-cold);
     text-transform: uppercase;
     transition: color 0.2s;
 }
@@ -704,7 +703,13 @@ header {
     color: var(--color-text-dark);
 }
 
+/* --- PAGINA INTEGRANTES (MOBILE) --- */
 
+@media (max-width: 991px) {
+    .member-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
 /* ===================================================
     RESPONSIVIDADE (MOBILE)
