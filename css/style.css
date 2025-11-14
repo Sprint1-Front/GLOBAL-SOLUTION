@@ -489,14 +489,30 @@ header {
 }
 
 .contact-section .subtitle {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.contact-form {
     display: flex;
     flex-direction: column;
     gap: 20px;
     text-align: left;
 }
 
-.contact-form {
-    
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--color-main);
+    margin-bottom: 5px;
+    text-transform: uppercase;
 }
 
 /* ===================================================
