@@ -705,7 +705,7 @@ header {
 
 /* --- PAGINA INTEGRANTES (MOBILE) --- */
 
-@media (max-width: 991px) {
+@media (max-width: 600px) {
     .member-grid {
         grid-template-columns: 1fr;
     }
