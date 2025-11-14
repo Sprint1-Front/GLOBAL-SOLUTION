@@ -13,6 +13,7 @@
     --color-text-dark: #2c3e50;
     --color-text-light: #ffffff;
     --color-background: #fcfaf7;
+    --color-cold: #2A6F9E;
 
     --font-serif: 'Times New Roman', Times, serif;
     --font-sans: 'Arial', sans-serif;
@@ -513,6 +514,64 @@ header {
     color: var(--color-main);
     margin-bottom: 5px;
     text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    padding: 15px;
+    border: 1px solid rgba(102, 112, 133, 0.3);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: var(--font-serif);
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,    
+.form-group select:focus {
+    border-color: var(--color-cold);
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.error-mensage {
+    color: var(--color-accent);
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+    height: 15px;
+    font-family: var(--font-sans);
+}
+
+.success-mensage {
+    color: #27ae60;
+    font-size: 1rem;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #27ae60;
+    border-radius: 4px;
+    margin-top: 20px;
+    display: none;
+}
+
+.submit-btn {
+    background-color: var(--color-cold);
+    color: var(--color-text-dark);
+    padding: 15px 25px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #27ae60;
 }
 
 /* ===================================================
