@@ -46,7 +46,8 @@
     <main class="contact-section">
         <div class="contact-container">
             <h1 class="page-title">Fale Conosco</h1>
-            <p class="subtitle">Interessado em soluções para reskilling ou tem dúvidas sobre a TalentForge? Envie sua mensagem.</p>
+            <p class="subtitle">Interessado em soluções para reskilling ou tem dúvidas sobre a TalentForge? Envie sua
+                mensagem.</p>
 
             <form id="contact-form" class="contact-form">
                 <div class="form-group">
@@ -58,8 +59,22 @@
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" required placeholder="Digite seu email aqui...">
-                    <div class="error-message" id="error-nome"></div>
+                    <div class="error-message" id="error-email"></div>
                 </div>
+
+                <div class="form-group">
+                    <label for="assunto">Assunto</label>
+                    <select name="assunto" id="assunto">
+                        <option value="">Selecione um assunto</option>
+                        <option value="duvidas">Dúvidas sobre o projeto</option>
+                        <option value="parceria">Proposta de Parceria/Investimento</option>
+                        <option value="reskilling">Ajuda com Reskilling</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                    <div class="error-message" id="error-assunto"></div>
+                </div>
+
+                
             </form>
         </div>
     </main>
