@@ -13,6 +13,7 @@
     --color-text-dark: #2c3e50;
     --color-text-light: #ffffff;
     --color-background: #fcfaf7;
+    --color-cold: #2A6F9E;
 
     --font-serif: 'Times New Roman', Times, serif;
     --font-sans: 'Arial', sans-serif;
@@ -416,6 +417,299 @@ header {
 /*===========================
     FIM PAGINA SOBRE
 ============================= */
+
+/* ===================================================
+    ESTILOS DA PÁGINA FAQ
+=================================================== */
+
+.faq-section {
+    padding: 80px 10%;
+    min-height: 70vh;
+}
+
+.faq-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    padding: 25px 0;
+}
+
+.faq-question {
+    font-family: var(--font-sans);
+    font-size: 1.15rem;
+    color: var(--color-text-dark);
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.faq-answer {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #444;
+    padding-left: 5px;
+}
+
+/* --- PAGINA FAQ MOBILE --- */
+
+@media (max-width: 767px) {
+    .page-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    .faq-question {
+        font-size: 1rem;
+    }
+    .faq-answer {
+        font-size: 0.95rem;
+    }
+}
+
+/* ===================================================
+    ESTILOS DA PÁGINA CONTATO
+=================================================== */
+
+.contact-section {
+    padding: 80px 10%;
+    min-height: 85vh;
+}
+
+.contact-container {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-section .page-title {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.contact-section .subtitle {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--color-main);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    padding: 15px;
+    border: 1px solid rgba(102, 112, 133, 0.3);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: var(--font-serif);
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,    
+.form-group select:focus {
+    border-color: var(--color-cold);
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.error-mensage {
+    color: var(--color-accent);
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+    height: 15px;
+    font-family: var(--font-sans);
+}
+
+.success-mensage {
+    color: #27ae60;
+    font-size: 1rem;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #27ae60;
+    border-radius: 4px;
+    margin-top: 20px;
+    display: none;
+}
+
+.submit-btn {
+    background-color: var(--color-cold);
+    color: var(--color-text-dark);
+    padding: 15px 25px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #27ae60;
+}
+
+/* --- PAGINA CONTATO (MOBILE) --- */
+
+@media (max-width: 991px) {
+    .contact-section {
+        padding: 40px 10%;
+        min-height: 80vh;
+    }
+
+    .contact-section .page-title {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .contact-section .subtitle {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .contact-form {
+        gap: 15px;
+    }
+
+    .form-group input, 
+    .form-group textarea,
+    .form-group select {
+        padding: 10px;
+        font-size: 0.95rem; 
+    }
+
+    .submit-btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+
+    .error-mensage {
+        font-size: 0.8rem;
+    }
+}
+
+/* ===================================================
+    ESTILOS DA PÁGINA INTEGRANTES
+=================================================== */
+
+.team-section {
+    padding: 80px 10%;
+    min-height: 80vh;
+    text-align: center;
+}
+
+.team-section .page-title {
+    font-family: var(--font-serif);
+    font-size: 2.8rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.team-section .subtitle {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    color: var(--color-main);
+    margin-bottom: 50px;
+}
+
+.member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.member-card {
+    padding: 25px;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.member-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid var(--color-main);
+}
+
+.member-name {
+    font-family: var(--font-sans);
+    font-size: 1.3rem;
+    color: var(--color-text-dark);
+    margin-bottom: 5px;
+}
+
+.member-info {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.member-data {
+    font-weight: bold;
+    color: var(--color-main);
+}
+
+.member-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.member-links a {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--color-cold);
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+
+.member-links a:hover {
+    color: var(--color-text-dark);
+}
+
+/* --- PAGINA INTEGRANTES (MOBILE) --- */
+
+@media (max-width: 600px) {
+    .member-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
 /* ===================================================
     RESPONSIVIDADE (MOBILE)
