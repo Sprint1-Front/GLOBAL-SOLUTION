@@ -20,8 +20,18 @@ document.addEventListener('DOMContentLoaded', () => {
             event.preventDefault();
 
             if (validateForm()) {
+                const data = {
+                    nome: document.getElementById('nome').value,
+                    email: document.getElementById('email').value,
+                    assunto: document.getElementById('assunto').value,
+                    mensagem: document.getElementById('mensagem').value
+                };
+
+                localStorage.setItem('contato', JSON.stringify(data));
+
                 document.getElementById('success-message').textContent = 'Mensagem enviada com sucesso! Em breve entraremos em contato.';
                 document.getElementById('success-message').style.display = 'block';
+
                 form.reset();
             }
         });
