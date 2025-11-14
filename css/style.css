@@ -574,6 +574,45 @@ header {
     background-color: #27ae60;
 }
 
+/* --- PAGINA CONTATO (MOBILE) --- */
+
+@media (max-width: 991px) {
+    .contact-section {
+        padding: 40px 10%;
+        min-height: 80vh;
+    }
+
+    .contact-section .page-title {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .contact-section .subtitle {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .contact-form {
+        gap: 15px;
+    }
+
+    .form-group input, 
+    .form-group textarea,
+    .form-group select {
+        padding: 10px;
+        font-size: 0.95rem; 
+    }
+
+    .submit-btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+
+    .error-mensage {
+        font-size: 0.8rem;
+    }
+}
+
 /* ===================================================
     RESPONSIVIDADE (MOBILE)
 =================================================== */
