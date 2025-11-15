@@ -715,7 +715,77 @@ header {
     ESTILOS DA PÁGINA ASSISTENTE IA
 =================================================== */
 
-.asssistant
+.assistant-section {
+    padding: 80px 10%;
+    min-height: 85vh;
+    text-align: center;
+}
+
+.assistant-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.assistant-section .page-title {
+    font-family: var(--font-serif);
+    font-size: 2.8rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.assistant-section .subtitle {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.chatbot-info {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-bottom: 60px;
+    text-align: left;
+}
+
+.info-card {
+    background-color: var(--color-background);
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.info-card h2 {
+    font-family: var(--font-sans);
+    font-size: 1.5rem;
+    color: var(--color-text-dark);
+    margin-bottom: 25px;
+}
+
+.info-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-card li {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+    padding-left: 1.5em;
+    position: relative;
+}
+
+.info-card li::before {
+    content: "→";
+    color: var(--color-accent);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    position: absolute;
+    left: 0;
+}
 
 /* ===================================================
     RESPONSIVIDADE (MOBILE)
