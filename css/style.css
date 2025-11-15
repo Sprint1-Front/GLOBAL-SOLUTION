@@ -23,15 +23,56 @@
     ESTILOS GERAIS
 =================================================== */
 
-body {
+html, body {
     font-family: var(--font-serif);
     background-color: var(--color-background);
     color: var(--color-text-dark);
+    height: 100%;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-title {
+    font-family: var(--font-serif);
+    font-size: 2.8rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/* --- PAGINA MAPA IA (MOBILE) -- */
+
+@media (max-width: 991px) {
+    .mapa-section {
+        padding: 40px 5%;
+    }
+
+    .report-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mapa-section .page-title {
+        font-size: 2rem;
+    }
+}
+
+/* --- PAGINA MAPA IA (TABLET/NOTEBOOK) --- */
+
+@media (max-width: 1050px) {
+    .report-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* ===================================================
@@ -308,6 +349,7 @@ header {
         FOOTER
 =============================*/
 
+
 .main-footer {
     background-color: var(--color-background);
     padding: 30px 10%;
@@ -315,6 +357,7 @@ header {
     border: 1px solid rgba(0, 0, 0, 0.05);
     font-family: var(--font-sans);
     color: var(--color-main);
+    flex-shrink: 0;
 }
 
 .main-footer p {
@@ -483,12 +526,6 @@ header {
     text-align: center;
 }
 
-.contact-section .page-title {
-    font-size: 2.8rem;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
 .contact-section .subtitle {
     font-size: 1.5rem;
     color: #666;
@@ -623,13 +660,6 @@ header {
     text-align: center;
 }
 
-.team-section .page-title {
-    font-family: var(--font-serif);
-    font-size: 2.8rem;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
 .team-section .subtitle {
     font-family: var(--font-sans);
     font-size: 1.1rem;
@@ -724,13 +754,6 @@ header {
 .assistant-container {
     max-width: 900px;
     margin: auto;
-}
-
-.assistant-section .page-title {
-    font-family: var(--font-serif);
-    font-size: 2.8rem;
-    font-weight: 500;
-    margin-bottom: 10px;
 }
 
 .assistant-section .subtitle {
@@ -833,6 +856,120 @@ header {
         grid-template-columns: 1fr;
         gap: 20px;
     }
+}
+
+/* ===================================================
+    ESTILOS DA PÁGINA MAPA IA
+=================================================== */
+
+.mapa-section {
+    padding: 80px 10%;
+    min-height: 85vh;
+    text-align: center;
+}
+
+.mapa-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.mapa-section .subtitle {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+.report-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.report-card {
+    background-color: var(--color-background);
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    text-align: left;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-label {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: var(--color-main);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.risk-level {
+    font-family: var(--font-sans);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.risk-level.medium {
+    color: #f39c12;
+}
+
+.risk-description {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    flex-grow: 1;
+}
+
+.focus-skill {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    color: var(--color-accent);
+    font-style: italic;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.skill-description {
+    flex-grow: 1;
+}
+
+.trilha-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.trilha-list li {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    padding-left: 10px;
+    position: relative;
+}
+
+.trilha-list li::before {
+    content: "•";
+    color: var(--color-main);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    position: absolute;
+    left: 0;
+}
+
+.mapa-action-link {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    margin-top: auto; 
+    display: inline-block;
 }
 
 /* ===================================================
