@@ -95,3 +95,7 @@ function validateForm() {
         document.getElementById(fieldId).style.borderColor = '';
     }
 }
+
+
+// BOTÃO MUDAR DE COR //
+
