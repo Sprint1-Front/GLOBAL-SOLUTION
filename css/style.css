@@ -787,6 +787,54 @@ header {
     left: 0;
 }
 
+.access-card {
+    text-align: center;
+    background-color: #e8f5e9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.access-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.btn-chatbot-access {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0088CC;
+    color: var(--color-text-light);
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-family: var(--font-sans);
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+    gap: 10px;
+}
+
+.btn-chatbot-access:hover {
+    background-color: #006699;
+}
+
+.telegram-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* ---- Estilização da foto DEMO --- */
+
+/* --- ASSISTENTE IA (MOBILE) --- */
+
+@media (max-width: 767px) {
+    .chatbot-info {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
 /* ===================================================
     RESPONSIVIDADE (MOBILE)
 =================================================== */
