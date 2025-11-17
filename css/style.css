@@ -1,5 +1,5 @@
 /* ===================================================
-    RESET & VARS
+    RESET & VARS & DARK MODE
 =================================================== */
 * {
     margin: 0;
@@ -14,17 +14,25 @@
     --color-text-light: #ffffff;
     --color-background: #fcfaf7;
     --color-cold: #2A6F9E;
+    
+    --bg-primary: var(--color-background);
+    --text-primary: var(--color-text-dark);
+    --border-subtle: rgba(0, 0, 0, 0.08);
+    --card-bg: var(--color-background); 
+    --text-secondary: #444; 
 
     --font-serif: 'Times New Roman', Times, serif;
     --font-sans: 'Arial', sans-serif;
 }
 
 .dark-mode {
-    --bg-color: #1a1a2e;    
-    --text-color: #f7f7f7; 
-    --main-accent: #b28a49; 
-    --border-color: rgba(255, 255, 255, 0.1); 
-    --card-bg: #22223b;      
+    --bg-primary: #1a1a2e; 
+    --text-primary: #f7f7f7; 
+    --border-subtle: rgba(255, 255, 255, 0.1);
+    --card-bg: #22223b; 
+    --text-secondary: #cccccc; 
+    --color-main: #b28a49;
+    --color-accent: #E74C3C;
 }
 
 /* ===================================================
@@ -32,15 +40,11 @@
 =================================================== */
 
 html, body {
-    font-family: var(--font-serif);
-    background-color: var(--color-background);
-    color: var(--color-text-dark);
     height: 100%;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
+    font-family: var(--font-serif);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 body {
@@ -48,63 +52,21 @@ body {
     flex-direction: column;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .page-title {
     font-family: var(--font-serif);
     font-size: 2.8rem;
     font-weight: 500;
     margin-bottom: 10px;
+    color: var(--text-primary);
 }
 
 main {
     flex: 1 0 auto;
-}
-
-/* =================================
-    BOTÃO COR
-============================= */
-
-.btn-toggle-mode {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-    margin-right: 15px;
-    transition: transform 0.2s;
-    font-size: 1.5rem; 
-    color: var(--color-text-dark); 
-    line-height: 1;
-}
-
-.dark-mode .btn-toggle-mode {
-    color: var(--color-text-light);
-}
-
-.icon-light-mode {
-    display: block;
-}
-
-/* --- PAGINA MAPA IA (MOBILE) -- */
-
-@media (max-width: 991px) {
-    .mapa-section {
-        padding: 40px 5%;
-    }
-
-    .report-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .mapa-section .page-title {
-        font-size: 2rem;
-    }
-}
-
-/* --- PAGINA MAPA IA (TABLET/NOTEBOOK) --- */
-
-@media (max-width: 1050px) {
-    .report-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
 /* ===================================================
@@ -112,12 +74,13 @@ main {
 =================================================== */
 
 header {
-    background-color: var(--color-background);
+    background-color: var(--bg-primary);
     padding: 20px 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    transition: background-color 0.3s;
 }
 
 .logo a {
@@ -179,35 +142,23 @@ header {
     color: var(--color-text-light);
 }
 
-.btn-toggle-nav {
-    display: none;
+.btn-toggle-mode {
+    background: none;
     border: none;
-    background: transparent;
     cursor: pointer;
-    padding: 10px;
-    z-index: 1001;
-    position: relative;
+    padding: 5px;
+    margin-right: 15px;
+    transition: transform 0.2s;
+    font-size: 1.5rem; 
+    color: var(--color-text-dark); 
+    line-height: 1;
 }
 
-.hamburguer-icon,
-.hamburguer-icon::after,
-.hamburguer-icon::before {
-    background-color: transparent;
+.dark-mode .btn-toggle-mode {
+    color: var(--color-text-light);
 }
 
-.hamburguer-icon {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: var(--color-text-dark);
-    border-radius: 3px;
-    position: relative;
-}
-
-.hamburguer-img-icon {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+.icon-light-mode {
     display: block;
 }
 
@@ -224,30 +175,17 @@ header {
     line-height: 1; 
 }
 
-.hamburguer-icon::before,
-.hamburguer-icon::after {
-    display: none;
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 3px;
-    border-radius: 3px;
-    transition: all 0.3s ease-in-out;
-}
-
-.hamburguer-icon::before {
-    transform: translateY(-8px);
-}
-
-.hamburguer-icon::after {
-    transform: translateY(8px);
+.hamburguer-img-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 .contatos img {
     height: 25px;
     width: auto;
     transition: opacity 0.2s;
-    gap: 60px;
 }
 
 .contatos img:hover {
@@ -255,7 +193,7 @@ header {
 }
 
 /* ===================================================
-    ESTILOS DA SEÇÃO HERO
+    ESTILOS DA SEÇÃO HERO (index.html)
 =================================================== */
 
 .hero-section {
@@ -283,13 +221,13 @@ header {
 
 .hero-content h1 {
     font-size: 3.5rem;
-    color: var(--color-text-dark);
+    color: var(--text-primary);
     line-height: 1.3;
     font-weight: 400;
     margin-bottom: 40px;
 }
 
-.highlit {
+.highlight {
     font-style: italic;
     text-decoration: underline;
     text-decoration-color: rgba(44, 62, 80, 0.3);
@@ -304,7 +242,7 @@ header {
 }
 
 .minimal-actions a {
-    color: var(--color-text-dark);
+    color: var(--text-primary);
     transition: color 0.3s;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -319,14 +257,16 @@ header {
 =================================================== */
 
 .features-section {
-    padding: 50px 5%;
+    padding: 50px 10%;
+    background-color: var(--card-bg);
     text-align: center;
+    transition: background-color 0.3s;
 }
 
 .section-title {
     font-family: var(--font-sans);
     font-size: 2rem;
-    color: var(--color-text-dark);
+    color: var(--text-primary);
     margin-bottom: 30px;
     font-weight: 600;
 }
@@ -338,15 +278,15 @@ header {
 }
 
 .feature-card {
-    background-color: var(--color-background);
+    background-color: var(--card-bg);
     padding: 30px;
+    border: 1px solid var(--border-subtle);
     border-radius: 8px;
     text-align: left;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, background-color 0.3s, border-color 0.3s;
 }
 
 .feature-card:hover {
-    transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
@@ -361,61 +301,81 @@ header {
     font-family: var(--font-serif);
     font-size: 1rem;
     line-height: 1.6;
-    color: #444;
-    margin: 20px;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    transition: color 0.3s;
 }
 
 .feature-link {
     font-family: var(--font-sans);
     font-size: 0.9rem;
     font-weight: bold;
+    color: var(--color-accent);
     text-transform: uppercase;
     display: inline-block;
 }
 
 .feature-link:hover {
-    color: var(--color-accent);
+    color: var(--color-main);
 }
 
-/* =============================
-        FOOTER
-=============================*/
+/* ===================================================
+    ESTILOS DO FOOTER
+=================================================== */
 
-
-.main-footer {
-    background-color: var(--color-background);
+.footer {
+    background-color: var(--bg-primary);
     padding: 30px 10%;
     text-align: center;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid var(--border-subtle); 
     font-family: var(--font-sans);
     color: var(--color-main);
     flex-shrink: 0;
+    transition: background-color 0.3s, border-color 0.3s;
+    font-size: 0.8rem;
 }
 
-.main-footer p {
+.footer p {
     margin-bottom: 10px;
     font-size: 0.9rem;
+    color: var(--color-main);
+    transition: color 0.3s;
+}
+
+.footer-links {
+    margin-top: 5px;
 }
 
 .footer-links a {
-    color: var(--color-text-dark);
+    color: var(--text-primary);
     margin: 0 8px;
     font-weight: 500;
     font-size: 0.85rem;
-    transition: color 0.2s;
     text-transform: uppercase;
+    transition: color 0.2s;
 }
 
 .footer-links a:hover {
     color: var(--color-accent);
 }
 
+.footer-separator {
+    color: var(--color-main);
+    opacity: 0.5;
+}
+
+.dark-mode .footer p {
+    color: var(--text-secondary);
+}
+
 /* ===================================================
-    PAGINA - SOBRE (DESKTOP)
+    ESTILOS DE PÁGINAS (SOBRE, FAQ, CONTATO, INTEGRANTES)
 =================================================== */
 
 .section {
     padding: 60px 10%;
+    border-bottom: 1px solid var(--border-subtle);
+    transition: border-color 0.3s;
 }
 
 .section:last-child {
@@ -427,7 +387,7 @@ header {
     font-size: 2.2rem;
     font-family: var(--font-serif);
     font-weight: 500;
-    color: var(--color-text-dark);
+    color: var(--text-primary);
     margin-bottom: 30px;
     line-height: 1.3;
 }
@@ -442,8 +402,9 @@ header {
 .section p {
     font-size: 1.15rem;
     line-height: 1.8;
-    color: #444;
+    color: var(--text-secondary);
     margin-top: 20px;
+    transition: color 0.3s;
 }
 
 .section ul {
@@ -458,7 +419,7 @@ header {
     margin-bottom: 15px;
     position: relative;
     padding-left: 25px;
-    color: var(--color-text-dark);
+    color: var(--text-primary);
 }
 
 .section ul li::before {
@@ -478,25 +439,6 @@ header {
     color: var(--color-accent);
 }
 
-/* --- RESPONSIVIDADE (MOBILE) PAGINA SOBRE --- */
-
-@media (max-width: 991px) {
-    .section h1 {
-        font-size: 1.8rem;
-    }
-    .section p, .section ul li {
-        font-size: 1rem;
-    }
-}
-
-/*===========================
-    FIM PAGINA SOBRE
-============================= */
-
-/* ===================================================
-    ESTILOS DA PÁGINA FAQ
-=================================================== */
-
 .faq-section {
     padding: 80px 10%;
     min-height: 70vh;
@@ -509,12 +451,18 @@ header {
 
 .faq-item {
     padding: 25px 0;
+    border-bottom: 1px solid var(--border-subtle);
+    transition: border-color 0.3s;
+}
+
+.faq-item:first-child {
+    border-top: 1px solid var(--border-subtle);
 }
 
 .faq-question {
     font-family: var(--font-sans);
     font-size: 1.15rem;
-    color: var(--color-text-dark);
+    color: var(--text-primary);
     font-weight: 600;
     cursor: pointer;
     margin-bottom: 10px;
@@ -524,28 +472,9 @@ header {
     font-family: var(--font-serif);
     font-size: 1.05rem;
     line-height: 1.7;
-    color: #444;
+    color: var(--text-secondary);
     padding-left: 5px;
 }
-
-/* --- PAGINA FAQ MOBILE --- */
-
-@media (max-width: 767px) {
-    .page-title {
-        font-size: 2rem;
-        margin-bottom: 40px;
-    }
-    .faq-question {
-        font-size: 1rem;
-    }
-    .faq-answer {
-        font-size: 0.95rem;
-    }
-}
-
-/* ===================================================
-    ESTILOS DA PÁGINA CONTATO
-=================================================== */
 
 .contact-section {
     padding: 80px 10%;
@@ -560,7 +489,7 @@ header {
 
 .contact-section .subtitle {
     font-size: 1.5rem;
-    color: #666;
+    color: var(--text-secondary);
     margin-bottom: 40px;
 }
 
@@ -589,15 +518,17 @@ header {
 .form-group textarea,
 .form-group select {
     padding: 15px;
-    border: 1px solid rgba(102, 112, 133, 0.3);
+    border: 1px solid var(--border-subtle);
     border-radius: 4px;
     font-size: 1rem;
     font-family: var(--font-serif);
-    transition: border-color 0.2s;
+    transition: border-color 0.2s, background-color 0.3s, color 0.3s;
+    background-color: var(--bg-primary); 
+    color: var(--text-primary);
 }
 
 .form-group input:focus,
-.form-group textarea:focus,    
+.form-group textarea:focus,    
 .form-group select:focus {
     border-color: var(--color-cold);
     outline: none;
@@ -643,49 +574,6 @@ header {
     background-color: #27ae60;
 }
 
-/* --- PAGINA CONTATO (MOBILE) --- */
-
-@media (max-width: 991px) {
-    .contact-section {
-        padding: 40px 10%;
-        min-height: 80vh;
-    }
-
-    .contact-section .page-title {
-        font-size: 2rem;
-        margin-bottom: 10px;
-    }
-
-    .contact-section .subtitle {
-        font-size: 1rem;
-        margin-bottom: 30px;
-    }
-
-    .contact-form {
-        gap: 15px;
-    }
-
-    .form-group input, 
-    .form-group textarea,
-    .form-group select {
-        padding: 10px;
-        font-size: 0.95rem; 
-    }
-
-    .submit-btn {
-        padding: 12px 20px;
-        font-size: 0.9rem;
-    }
-
-    .error-mensage {
-        font-size: 0.8rem;
-    }
-}
-
-/* ===================================================
-    ESTILOS DA PÁGINA INTEGRANTES
-=================================================== */
-
 .team-section {
     padding: 80px 10%;
     min-height: 80vh;
@@ -709,8 +597,10 @@ header {
 
 .member-card {
     padding: 25px;
+    border: 1px solid var(--border-subtle);
     border-radius: 8px;
     transition: box-shadow 0.3s ease;
+    background-color: var(--card-bg);
 }
 
 .member-card:hover {
@@ -729,14 +619,14 @@ header {
 .member-name {
     font-family: var(--font-sans);
     font-size: 1.3rem;
-    color: var(--color-text-dark);
+    color: var(--text-primary);
     margin-bottom: 5px;
 }
 
 .member-info {
     font-family: var(--font-sans);
     font-size: 0.95rem;
-    color: #666;
+    color: var(--color-main);
     margin-bottom: 20px;
 }
 
@@ -762,20 +652,8 @@ header {
 }
 
 .member-links a:hover {
-    color: var(--color-text-dark);
+    color: var(--text-primary);
 }
-
-/* --- PAGINA INTEGRANTES (MOBILE) --- */
-
-@media (max-width: 600px) {
-    .member-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* ===================================================
-    ESTILOS DA PÁGINA ASSISTENTE IA
-=================================================== */
 
 .assistant-section {
     padding: 80px 10%;
@@ -791,11 +669,12 @@ header {
 .assistant-section .subtitle {
     font-family: var(--font-sans);
     font-size: 1.1rem;
-    color: #666;
+    color: var(--text-secondary);
     margin-bottom: 50px;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    transition: color 0.3s;
 }
 
 .chatbot-info {
@@ -807,15 +686,17 @@ header {
 }
 
 .info-card {
-    background-color: var(--color-background);
+    background-color: var(--card-bg);
     padding: 25px;
     border-radius: 8px;
+    border: 1px solid var(--border-subtle);
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
 .info-card h2 {
     font-family: var(--font-sans);
     font-size: 1.5rem;
-    color: var(--color-text-dark);
+    color: var(--text-primary);
     margin-bottom: 25px;
 }
 
@@ -830,6 +711,7 @@ header {
     margin-bottom: 10px;
     padding-left: 1.5em;
     position: relative;
+    color: var(--text-primary);
 }
 
 .info-card li::before {
@@ -844,7 +726,7 @@ header {
 
 .access-card {
     text-align: center;
-    background-color: #e8f5e9;
+    background-color: var(--card-bg);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -859,7 +741,7 @@ header {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: #0088CC;
+    background-color: var(--color-cold);
     color: var(--color-text-light);
     padding: 12px 20px;
     border-radius: 50px;
@@ -879,21 +761,6 @@ header {
     height: 24px;
 }
 
-/* ---- Estilização da foto DEMO --- */
-
-/* --- ASSISTENTE IA (MOBILE) --- */
-
-@media (max-width: 767px) {
-    .chatbot-info {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-}
-
-/* ===================================================
-    ESTILOS DA PÁGINA MAPA IA
-=================================================== */
-
 .mapa-section {
     padding: 80px 10%;
     min-height: 85vh;
@@ -908,8 +775,9 @@ header {
 .mapa-section .subtitle {
     font-family: var(--font-sans);
     font-size: 1.1rem;
-    color: #666;
+    color: var(--text-secondary);
     margin-bottom: 50px;
+    transition: color 0.3s;
 }
 
 .report-grid {
@@ -919,14 +787,15 @@ header {
 }
 
 .report-card {
-    background-color: var(--color-background);
+    background-color: var(--card-bg);
     padding: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--border-subtle);
     border-radius: 8px;
     text-align: left;
     height: 100%;
     display: flex;
     flex-direction: column;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
 .card-label {
@@ -952,8 +821,9 @@ header {
     font-family: var(--font-serif);
     font-size: 1rem;
     line-height: 1.6;
-    color: #444;
+    color: var(--text-secondary);
     flex-grow: 1;
+    transition: color 0.3s;
 }
 
 .focus-skill {
@@ -982,6 +852,7 @@ header {
     margin-bottom: 8px;
     padding-left: 10px;
     position: relative;
+    color: var(--text-primary);
 }
 
 .trilha-list li::before {
@@ -1005,11 +876,17 @@ header {
 }
 
 /* ===================================================
-    RESPONSIVIDADE (MOBILE)
+    RESPONSIVIDADE (GERAL E MOBILE)
 =================================================== */
 
-@media (max-width: 991px) {
+@media (max-width: 1050px) {
+    .report-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
+@media (max-width: 991px) {
+    
     .btn-toggle-nav {
         display: block;
     }
@@ -1091,14 +968,48 @@ header {
         justify-content: flex-start;
         padding-bottom: 30px;
     }
-
-    .feature-grid {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 30px;
+    
+    .mapa-section, .contact-section, .team-section, .faq-section, .features-section, .section {
+        padding: 40px 5%;
+    }
+    
+    .report-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-section .page-title, .team-section .page-title {
+        font-size: 2rem;
+    }
+    
+    .contact-section .subtitle {
+        font-size: 1rem;
+    }
+    
+    .section h1 {
+        font-size: 1.8rem;
+    }
+    
+    .section p, .section ul li, .faq-answer {
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 600px) {
+    .footer {
+        padding: 20px 5%;
+    }
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+    }
+    .footer-links a {
+        margin: 0;
+    }
+    .footer-separator {
+        display: none;
+    }
     .feature-grid {
         grid-template-columns: 1fr;
         gap: 20px;

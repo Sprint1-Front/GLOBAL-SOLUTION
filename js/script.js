@@ -99,3 +99,42 @@ function validateForm() {
 
 // BOTÃO MUDAR DE COR //
 
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementById('darkModeToggle')
+    const body = document.body;
+
+    const modeIconSpan = toggleButton ? toggleButton.querySelector('span') : null;
+
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-mode');
+        if (modeIconSpan) {
+            modeIconSpan.textContent = '☾';
+        }
+    } else {
+        if (modeIconSpan) {
+            modeIconSpan.textContent = '☼';
+        }
+    }
+
+    if (toggleButton) {
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+
+                localStorage.setItem('theme', 'dark');
+                if (modeIconSpan) {
+                    modeIconSpan.textContent = '☾';
+                }
+            } else {
+
+                localStorage.setItem('theme', 'light');
+                if (modeIconSpan) {
+                    modeIconSpan.textContent = '☼';
+                }
+            }
+        });
+    }
+});
