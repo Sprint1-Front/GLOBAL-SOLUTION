@@ -34,8 +34,8 @@
                     <span class="icon-light-mode">☼</span>
                 </button>
 
-                <button class="btn-login">Login</button>
-                <button class="btn-signup">Sign Up</button>
+                <button class="btn-login" onclick="openLoginModal()">Login</button>
+                <button class="btn-signup" onclick="openLoginModal()">Sign Up</button>
             </div>
 
             <div class="contatos">
@@ -102,6 +102,22 @@
             <a href="">Contato</a>
         </div>
     </footer>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeLoginModal()">&times;</span>
+
+            <h2>Acesso à TalentForge</h2>
+            <form id="loginForm">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Entrar</button>
+            </form>
+            <p id="message"></p>
+        </div>
+    </div>
 
     <script src="./js/script.js"></script>
 </body>

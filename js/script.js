@@ -1,18 +1,42 @@
-function toggleNav() {
-    const navMenu = document.getElementById('main-menu');
-    const navButton = document.querySelector('.btn-menu-toggle');
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementById('darkModeToggle');
+    const body = document.body;
+    const modeIconSpan = toggleButton ? toggleButton.querySelector('span') : null;
 
-    if (navMenu) {
-        navMenu.classList.toggle('open');
-
-        if (navButton) {
-            const isExpanded = navButton.getAttribute('aria-expanded') === 'true';
-            navButton.setAttribute('aria-expanded', !isExpanded);
+    // LÓGICA DE PERSISTÊNCIA E INICIALIZAÇÃO DO TEMA
+    const savedTheme = localStorage.getItem('theme');
+    
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-mode');
+        if (modeIconSpan) {
+            modeIconSpan.textContent = '☾';
+        }
+    } else {
+        if (modeIconSpan) {
+            modeIconSpan.textContent = '☼';
         }
     }
-}
+    
+    // BOTÃO DARK MODE
+    if (toggleButton) {
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                if (modeIconSpan) {
+                    modeIconSpan.textContent = '☾';
+                }
+            } else {
+                localStorage.setItem('theme', 'light');
+                if (modeIconSpan) {
+                    modeIconSpan.textContent = '☼';
+                }
+            }
+        });
+    }
 
-document.addEventListener('DOMContentLoaded', () => {
+    // LÓGICA DE VALIDAÇÃO DO FORMULÁRIO DE CONTATO
     const form = document.getElementById('contactForm');
 
     if (form) {
@@ -38,6 +62,45 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// FUNÇÃO GLOBAL DE TOGGLE DO MENU
+function toggleNav() {
+    const navMenu = document.getElementById('main-menu');
+    // CORREÇÃO DE SELETOR: Usar a classe correta do HTML (.btn-toggle-nav)
+    const navButton = document.querySelector('.btn-toggle-nav');
+
+    if (navMenu) {
+        navMenu.classList.toggle('open');
+
+        if (navButton) {
+            const isExpanded = navButton.getAttribute('aria-expanded') === 'true';
+            navButton.setAttribute('aria-expanded', !isExpanded);
+        }
+    }
+}
+
+// FUNÇÕES GLOBAIS DO MODAL DE LOGIN
+function openLoginModal() {
+    const modal = document.getElementById('loginModal');
+    if (modal) {
+        modal.style.display = "block";
+    }
+}
+
+function closeLoginModal() {
+    const modal = document.getElementById('loginModal');
+    if (modal) {
+        modal.style.display = "none";
+    }
+}
+
+window.onclick = function(event) {
+    const modal = document.getElementById('loginModal');
+    if (event.target == modal) {
+        closeLoginModal();
+    }
+}
+
+// FUNÇÕES AUXILIARES DE VALIDAÇÃO
 function validateForm() {
     let isValid = true;
 
@@ -79,62 +142,19 @@ function validateForm() {
     }
 
     return isValid;
-
-    function validateEmailFormat(email) {
-        const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        return re.test(String(email).toLowerCase());
-    }
-
-    function displayError(fieldId, message) {
-        document.getElementById(`error-${fieldId}`).textContent = message;
-        document.getElementById(fieldId).style.borderColor = 'var(--color-accent)';
-    }
-
-    function clearError(fieldId) {
-        document.getElementById(`error-${fieldId}`).textContent = '';
-        document.getElementById(fieldId).style.borderColor = '';
-    }
 }
 
+function validateEmailFormat(email) {
+    const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return re.test(String(email).toLowerCase());
+}
 
-// BOTÃO MUDAR DE COR //
+function displayError(fieldId, message) {
+    document.getElementById(`error-${fieldId}`).textContent = message;
+    document.getElementById(fieldId).style.borderColor = '#B22222'; 
+}
 
-document.addEventListener('DOMContentLoaded', () => {
-    const toggleButton = document.getElementById('darkModeToggle')
-    const body = document.body;
-
-    const modeIconSpan = toggleButton ? toggleButton.querySelector('span') : null;
-
-    const savedTheme = localStorage.getItem('theme');
-
-    if (savedTheme === 'dark') {
-        body.classList.add('dark-mode');
-        if (modeIconSpan) {
-            modeIconSpan.textContent = '☾';
-        }
-    } else {
-        if (modeIconSpan) {
-            modeIconSpan.textContent = '☼';
-        }
-    }
-
-    if (toggleButton) {
-        toggleButton.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            
-            if (body.classList.contains('dark-mode')) {
-
-                localStorage.setItem('theme', 'dark');
-                if (modeIconSpan) {
-                    modeIconSpan.textContent = '☾';
-                }
-            } else {
-
-                localStorage.setItem('theme', 'light');
-                if (modeIconSpan) {
-                    modeIconSpan.textContent = '☼';
-                }
-            }
-        });
-    }
-});
+function clearError(fieldId) {
+    document.getElementById(`error-${fieldId}`).textContent = '';
+    document.getElementById(fieldId).style.borderColor = '';
+}
