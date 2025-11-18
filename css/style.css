@@ -31,7 +31,7 @@
     --border-subtle: rgba(255, 255, 255, 0.1);
     --card-bg: #22223b; 
     --text-secondary: #cccccc; 
-    --color-main: #b28a49; /* Ajuste para fundo escuro */
+    --color-main: #b28a49; 
     --color-accent: #E74C3C;
 }
 
@@ -40,7 +40,7 @@ html, body {
     font-family: var(--font-serif);
     background-color: var(--bg-primary);
     color: var(--text-primary);
-    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+    transition: background-color 0.3s, color 0.3s;
 }
 
 body {
@@ -294,6 +294,7 @@ header {
     align-items: flex-start;
     text-align: left;
     padding: 60px 10%;
+    background-color: var(--bg-primary);
 }
 
 .hero-content {
@@ -368,17 +369,28 @@ header {
 }
 
 .feature-card {
-    background-color: var(--card-bg);
-    padding: 30px;
-    border: 1px solid var(--border-subtle);
-    border-radius: 8px;
+    background-color: transparent;
+    padding: 30px 0;
+    border: none;
+    border-radius: 0;
     text-align: left;
-    transition: transform 0.3s ease-in-out, background-color 0.3s, border-color 0.3s;
+    transition: none;
+    box-shadow: none;
 }
 
 .feature-card:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: none;
 }
+
+.feature-grid .feature-card:nth-child(1),
+.feature-grid .feature-card:nth-child(2) {
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.feature-grid .feature-card:nth-child(n+3) {
+    border-bottom: none;
+}
+
 
 .feature-card h3 {
     font-family: var(--font-sans);
@@ -417,7 +429,7 @@ header {
     background-color: var(--bg-primary);
     padding: 30px 10%;
     text-align: center;
-    border-top: 1px solid var(--border-subtle); 
+    border-top: none;
     font-family: var(--font-sans);
     color: var(--color-main);
     flex-shrink: 0;
@@ -466,6 +478,7 @@ header {
     padding: 60px 10%;
     border-bottom: 1px solid var(--border-subtle);
     transition: border-color 0.3s;
+    background-color: var(--bg-primary);
 }
 
 .section:last-child {
@@ -503,7 +516,6 @@ header {
     margin-top: 30px;
 }
 
-/* CORREÇÃO DO BUG: Aplica cor secundária (clara) a listas e parágrafos */
 .section p, 
 .section ul li {
     color: var(--text-secondary);
@@ -539,6 +551,7 @@ header {
 .faq-section {
     padding: 80px 10%;
     min-height: 70vh;
+    background-color: var(--bg-primary); /* GARANTE FUNDO */
 }
 
 .faq-list {
@@ -576,6 +589,7 @@ header {
 .contact-section {
     padding: 80px 10%;
     min-height: 85vh;
+    background-color: var(--bg-primary); /* GARANTE FUNDO */
 }
 
 .contact-container {
@@ -675,6 +689,7 @@ header {
     padding: 80px 10%;
     min-height: 80vh;
     text-align: center;
+    background-color: var(--bg-primary); /* GARANTE FUNDO */
 }
 
 .team-section .subtitle {
@@ -692,17 +707,30 @@ header {
     margin: 0 auto;
 }
 
+/* MODIFICAÇÃO: Minimalista (remover borda, fundo, sombra) */
 .member-card {
-    padding: 25px;
-    border: 1px solid var(--border-subtle);
-    border-radius: 8px;
-    transition: box-shadow 0.3s ease;
-    background-color: var(--card-bg);
+    padding: 25px 0;
+    background-color: transparent; 
+    border-radius: 0; 
+    border: none; 
+    box-shadow: none; 
+    transition: none;
 }
 
 .member-card:hover {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: none;
 }
+
+.member-grid .member-card:nth-child(1),
+.member-grid .member-card:nth-child(2) {
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+/* Remove a linha de todos os demais */
+.member-grid .member-card:nth-child(n+3) {
+    border-bottom: none;
+}
+
 
 .member-photo {
     width: 150px;
@@ -756,6 +784,7 @@ header {
     padding: 80px 10%;
     min-height: 85vh;
     text-align: center;
+    background-color: var(--bg-primary); /* GARANTE FUNDO */
 }
 
 .assistant-container {
@@ -862,6 +891,7 @@ header {
     padding: 80px 10%;
     min-height: 85vh;
     text-align: center;
+    background-color: var(--bg-primary); /* GARANTE FUNDO */
 }
 
 .mapa-container {
@@ -884,16 +914,27 @@ header {
 }
 
 .report-card {
-    background-color: var(--card-bg);
-    padding: 20px;
-    border: 1px solid var(--border-subtle);
-    border-radius: 8px;
+    background-color: transparent;
+    padding: 20px 0;
+    border: none;
+    border-radius: 0;
     text-align: left;
     height: 100%;
     display: flex;
     flex-direction: column;
-    transition: background-color 0.3s, border-color 0.3s;
+    transition: none;
 }
+
+.report-grid .report-card:nth-child(1),
+.report-grid .report-card:nth-child(2) {
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+/* Remove a linha de todos os demais */
+.report-grid .report-card:nth-child(n+3) {
+    border-bottom: none;
+}
+
 
 .card-label {
     font-family: var(--font-sans);
@@ -979,6 +1020,15 @@ header {
 @media (max-width: 1050px) {
     .report-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Linhas para 2 colunas */
+    .report-grid .report-card {
+        border-bottom: none;
+    }
+    .report-grid .report-card:nth-child(1),
+    .report-grid .report-card:nth-child(2) {
+        border-bottom: 1px solid var(--border-subtle);
     }
 }
 
@@ -1088,6 +1138,18 @@ header {
     
     .section p, .section ul li, .faq-answer {
         font-size: 1rem;
+    }
+    
+    /* MODIFICAÇÃO RESPONSIVIDADE: Linha em todos os cartões (1 coluna) */
+    .report-grid .report-card,
+    .member-grid .member-card,
+    .feature-grid .feature-card {
+        border-bottom: 1px solid var(--border-subtle) !important; 
+    }
+    .report-grid .report-card:last-child,
+    .member-grid .member-card:last-child,
+    .feature-grid .feature-card:last-child {
+        border-bottom: none !important; 
     }
 }
 
