@@ -1208,4 +1208,18 @@ header {
         width: 80%; 
         max-width: 350px;
     }
+
+      .report-grid,
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .report-grid .report-card:nth-child(n) {
+        border-bottom: none !important;
+    }
+    .report-grid .report-card:nth-child(odd),
+    .report-grid .report-card:nth-child(even) {
+        border-bottom: 1px solid var(--border-subtle) !important;
+    }
 }
