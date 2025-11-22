@@ -738,7 +738,7 @@ header {
 
 .member-photo {
     width: 150px;
-    max-width: 100%; 
+    max-width: 100%;
     height: auto;
     object-fit: cover;
     margin-bottom: 20px;
@@ -1200,16 +1200,23 @@ header {
 =================================================== */
 
 @media (max-width: 768px) {
-    .hero-section, .mapa-section, .contact-section, .team-section, .faq-section, .features-section, .section {
-        padding: 40px 8%; 
+
+    .hero-section,
+    .mapa-section,
+    .contact-section,
+    .team-section,
+    .faq-section,
+    .features-section,
+    .section {
+        padding: 40px 8%;
     }
 
     .main-nav {
-        width: 80%; 
+        width: 80%;
         max-width: 350px;
     }
 
-      .report-grid,
+    .report-grid,
     .feature-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
@@ -1218,18 +1225,24 @@ header {
     .report-grid .report-card:nth-child(n) {
         border-bottom: none !important;
     }
+
     .report-grid .report-card:nth-child(odd),
     .report-grid .report-card:nth-child(even) {
         border-bottom: 1px solid var(--border-subtle) !important;
     }
-      .hero-content h1 {
+
+    .hero-content h1 {
         font-size: 2.8rem;
-    }.page-title {
+    }
+
+    .page-title {
         font-size: 2.2rem;
-    }.report-card .risk-level {
+    }
+
+    .report-card .risk-level {
         font-size: 2.5rem;
     }
-    
+
 }
 
 /* ===================================================
@@ -1237,10 +1250,20 @@ header {
     Adaptação para telas muito largas.
     =================================================== */
 
-    @media (min-width: 1300px) {
+@media (min-width: 1300px) {
 
-        .hero-section, .mapa-section, .contact-section, .team-section, .faq-section, .features-section, .section {
-        padding: 80px 15%; 
+    .hero-section,
+    .mapa-section,
+    .contact-section,
+    .team-section,
+    .faq-section,
+    .features-section,
+    .section {
+        padding: 80px 15%;
     }
-    
+    report-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
     }
+
+}
