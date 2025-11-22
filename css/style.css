@@ -517,3 +517,17 @@ header {
         gap: 20px;
     }
 }
+
+/* ===================================================
+    RESPONSIVIDADE: TABLET MÁXIMO (max-width: 768px)
+=================================================== */
+
+@media (max-width: 768px) {}
+------------------------------------------------------------------------
+
+
+
+.hero-section, .mapa-section, .contact-section, .team-section, .faq-section, .features-section, .section {
+        padding: 40px 8%; 
+    }
+    
