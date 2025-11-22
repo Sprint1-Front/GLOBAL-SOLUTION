@@ -1226,5 +1226,7 @@ header {
         font-size: 2.8rem;
     }.page-title {
         font-size: 2.2rem;
+    }.report-card .risk-level {
+        font-size: 2.5rem;
     }
 }
