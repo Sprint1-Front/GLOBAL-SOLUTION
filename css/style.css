@@ -14,28 +14,29 @@
     --color-text-light: #ffffff;
     --color-background: #fcfaf7;
     --color-cold: #2A6F9E;
-    
+
     --bg-primary: var(--color-background);
     --text-primary: var(--color-text-dark);
     --border-subtle: rgba(0, 0, 0, 0.08);
-    --card-bg: var(--color-background); 
-    --text-secondary: #444; 
+    --card-bg: var(--color-background);
+    --text-secondary: #444;
 
     --font-serif: 'Times New Roman', Times, serif;
     --font-sans: 'Arial', sans-serif;
 }
 
 .dark-mode {
-    --bg-primary: #1a1a2e; 
-    --text-primary: #f7f7f7; 
+    --bg-primary: #1a1a2e;
+    --text-primary: #f7f7f7;
     --border-subtle: rgba(255, 255, 255, 0.1);
-    --card-bg: #22223b; 
-    --text-secondary: #cccccc; 
-    --color-main: #b28a49; 
+    --card-bg: #22223b;
+    --text-secondary: #cccccc;
+    --color-main: #b28a49;
     --color-accent: #E74C3C;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     font-family: var(--font-serif);
     background-color: var(--bg-primary);
@@ -145,8 +146,8 @@ header {
     padding: 5px;
     margin-right: 15px;
     transition: transform 0.2s;
-    font-size: 1.5rem; 
-    color: var(--color-text-dark); 
+    font-size: 1.5rem;
+    color: var(--color-text-dark);
     line-height: 1;
 }
 
@@ -163,12 +164,12 @@ header {
     border: none;
     background: transparent;
     cursor: pointer;
-    padding: 0; 
+    padding: 0;
     z-index: 1001;
     position: relative;
-    width: 40px; 
-    height: 40px; 
-    line-height: 1; 
+    width: 40px;
+    height: 40px;
+    line-height: 1;
 }
 
 .hamburguer-img-icon {
@@ -193,7 +194,7 @@ header {
 =================================================== */
 
 #loginModal {
-    display: none; 
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -205,11 +206,11 @@ header {
 }
 
 .modal-content {
-    background-color: var(--bg-primary); 
+    background-color: var(--bg-primary);
     margin: 10% auto;
     padding: 30px;
     border-radius: 8px;
-    width: 90%; 
+    width: 90%;
     max-width: 400px;
     position: relative;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -260,7 +261,7 @@ header {
     width: 100%;
     margin-top: 20px;
     padding: 12px;
-    background-color: var(--color-cold); 
+    background-color: var(--color-cold);
     color: var(--color-text-light);
     border: none;
     border-radius: 4px;
@@ -516,7 +517,7 @@ header {
     margin-top: 30px;
 }
 
-.section p, 
+.section p,
 .section ul li {
     color: var(--text-secondary);
     transition: color 0.3s;
@@ -551,7 +552,8 @@ header {
 .faq-section {
     padding: 80px 10%;
     min-height: 70vh;
-    background-color: var(--bg-primary); /* GARANTE FUNDO */
+    background-color: var(--bg-primary);
+    /* GARANTE FUNDO */
 }
 
 .faq-list {
@@ -589,7 +591,8 @@ header {
 .contact-section {
     padding: 80px 10%;
     min-height: 85vh;
-    background-color: var(--bg-primary); /* GARANTE FUNDO */
+    background-color: var(--bg-primary);
+    /* GARANTE FUNDO */
 }
 
 .contact-container {
@@ -634,12 +637,12 @@ header {
     font-size: 1rem;
     font-family: var(--font-serif);
     transition: border-color 0.2s, background-color 0.3s, color 0.3s;
-    background-color: var(--bg-primary); 
+    background-color: var(--bg-primary);
     color: var(--text-primary);
 }
 
 .form-group input:focus,
-.form-group textarea:focus,    
+.form-group textarea:focus,
 .form-group select:focus {
     border-color: var(--color-cold);
     outline: none;
@@ -689,7 +692,8 @@ header {
     padding: 80px 10%;
     min-height: 80vh;
     text-align: center;
-    background-color: var(--bg-primary); /* GARANTE FUNDO */
+    background-color: var(--bg-primary);
+    /* GARANTE FUNDO */
 }
 
 .team-section .subtitle {
@@ -710,10 +714,10 @@ header {
 /* MODIFICAÇÃO: Minimalista (remover borda, fundo, sombra) */
 .member-card {
     padding: 25px 0;
-    background-color: transparent; 
-    border-radius: 0; 
-    border: none; 
-    box-shadow: none; 
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
     transition: none;
 }
 
@@ -784,7 +788,8 @@ header {
     padding: 80px 10%;
     min-height: 85vh;
     text-align: center;
-    background-color: var(--bg-primary); /* GARANTE FUNDO */
+    background-color: var(--bg-primary);
+    /* GARANTE FUNDO */
 }
 
 .assistant-container {
@@ -891,7 +896,8 @@ header {
     padding: 80px 10%;
     min-height: 85vh;
     text-align: center;
-    background-color: var(--bg-primary); /* GARANTE FUNDO */
+    background-color: var(--bg-primary);
+    /* GARANTE FUNDO */
 }
 
 .mapa-container {
@@ -1009,7 +1015,7 @@ header {
     font-weight: bold;
     color: var(--color-accent);
     text-transform: uppercase;
-    margin-top: auto; 
+    margin-top: auto;
     display: inline-block;
 }
 
@@ -1021,11 +1027,12 @@ header {
     .report-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     /* Linhas para 2 colunas */
     .report-grid .report-card {
         border-bottom: none;
     }
+
     .report-grid .report-card:nth-child(1),
     .report-grid .report-card:nth-child(2) {
         border-bottom: 1px solid var(--border-subtle);
@@ -1033,7 +1040,7 @@ header {
 }
 
 @media (max-width: 991px) {
-    
+
     .btn-toggle-nav {
         display: block;
     }
@@ -1072,7 +1079,8 @@ header {
         margin-bottom: 30px;
     }
 
-    .menu-list li a, .header-actions button {
+    .menu-list li a,
+    .header-actions button {
         color: var(--color-text-light);
         width: 100%;
         text-align: left;
@@ -1095,12 +1103,13 @@ header {
         background-color: var(--color-main);
         color: var(--color-text-dark);
     }
-    
+
     .hero-content h1 {
         font-size: 2.5rem;
     }
 
-    .header-actions, .contatos {
+    .header-actions,
+    .contatos {
         flex-direction: column;
         align-items: flex-start;
         margin-left: 0;
@@ -1115,41 +1124,50 @@ header {
         justify-content: flex-start;
         padding-bottom: 30px;
     }
-    
-    .mapa-section, .contact-section, .team-section, .faq-section, .features-section, .section {
+
+    .mapa-section,
+    .contact-section,
+    .team-section,
+    .faq-section,
+    .features-section,
+    .section {
         padding: 40px 5%;
     }
-    
+
     .report-grid {
         grid-template-columns: 1fr;
     }
-    
-    .contact-section .page-title, .team-section .page-title {
+
+    .contact-section .page-title,
+    .team-section .page-title {
         font-size: 2rem;
     }
-    
+
     .contact-section .subtitle {
         font-size: 1rem;
     }
-    
+
     .section h1 {
         font-size: 1.8rem;
     }
-    
-    .section p, .section ul li, .faq-answer {
+
+    .section p,
+    .section ul li,
+    .faq-answer {
         font-size: 1rem;
     }
-    
+
     /* MODIFICAÇÃO RESPONSIVIDADE: Linha em todos os cartões (1 coluna) */
     .report-grid .report-card,
     .member-grid .member-card,
     .feature-grid .feature-card {
-        border-bottom: 1px solid var(--border-subtle) !important; 
+        border-bottom: 1px solid var(--border-subtle) !important;
     }
+
     .report-grid .report-card:last-child,
     .member-grid .member-card:last-child,
     .feature-grid .feature-card:last-child {
-        border-bottom: none !important; 
+        border-bottom: none !important;
     }
 }
 
@@ -1157,18 +1175,22 @@ header {
     .footer {
         padding: 20px 5%;
     }
+
     .footer-links {
         display: flex;
         flex-direction: column;
         gap: 5px;
         align-items: center;
     }
+
     .footer-links a {
         margin: 0;
     }
+
     .footer-separator {
         display: none;
     }
+
     .feature-grid {
         grid-template-columns: 1fr;
         gap: 20px;
