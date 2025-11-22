@@ -1229,4 +1229,18 @@ header {
     }.report-card .risk-level {
         font-size: 2.5rem;
     }
+    
 }
+
+/* ===================================================
+    RESPONSIVIDADE: DESKTOP EXTENDIDO (min-width: 1300px)
+    Adaptação para telas muito largas.
+    =================================================== */
+
+    @media (min-width: 1300px) {
+
+        .hero-section, .mapa-section, .contact-section, .team-section, .faq-section, .features-section, .section {
+        padding: 80px 15%; 
+    }
+    
+    }
