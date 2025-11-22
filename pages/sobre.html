@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Sobre</title>
+    <title>Sobre | TalentForge</title>
 </head>
 
 <body>
@@ -30,8 +30,19 @@
             </ul>
 
             <div class="header-actions">
-                <button class="btn btn-login">Login</button>
-                <button class="btn btn-signup">Sign Up</button>
+                <button id="darkModeToggle" aria-label="Alternar modo escuro" class="btn-toggle-mode">
+                    <span class="icon-light-mode">☼</span>
+                </button>
+
+                <button class="btn-login" onclick="openLoginModal()">Login</button>
+                <button class="btn-signup" onclick="openLoginModal()">Sign Up</button>
+            </div>
+
+            <div class="contatos">
+                <a href="https://www.facebook.com/?locale=pt_BR"><img src="../assets/img/instagram.svg"
+                        alt="instagram"></a>
+                <a href="https://www.facebook.com/?locale=pt_BR"><img src="../assets/img/facebook.svg"
+                        alt="facebook"></a>
             </div>
         </nav>
     </header>
@@ -123,6 +134,18 @@
             </div>
         </section>
     </main>
+
+    <footer class="footer">
+        <p>© 2025 TalentForge. Todos os direitos reservados.</p>
+        <div class="footer-links">
+            <a href="../index.html">Início</a>
+            <a href="./sobre.html">Sobre o Projeto</a>
+            <a href="./integrantes.html">Integrantes</a>
+            <a href="./contato.html">Contato</a>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
 </body>
 
 </html>

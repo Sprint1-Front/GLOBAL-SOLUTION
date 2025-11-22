@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>TalentForge | Forjando o Futuro do Trabalho com IA</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="../index.html">TalentForge</a>
+        </div>
+
+        <button class="btn-toggle-nav" aria-expanded="false" aria-controls="main-menu" onclick="toggleNav()">
+            <img src="../assets/img/icon.png" alt="Ícone Hambúrguer TalentForge" class="hamburguer-img-icon">
+        </button>
+
+        <nav class="main-nav" id="main-menu">
+            <ul class="menu-list">
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="./mapa-de-carreira.html">Mapa IA</a></li>
+                <li><a href="./assistente-ia.html">Assistente</a></li>
+                <li><a href="./sobre.html">Sobre</a></li>
+                <li><a href="./integrantes.html">integrantes</a></li>
+                <li><a href="./faq.html">FAQ</a></li>
+                <li><a href="./contato.html">Contato</a></li>
+            </ul>
+
+            <div class="header-actions">
+                <button id="darkModeToggle" aria-label="Alternar modo escuro" class="btn-toggle-mode">
+                    <span class="icon-light-mode">☼</span>
+                </button>
+
+                <button class="btn-login">Login</button>
+                <button class="btn-signup">Sign Up</button>
+            </div>
+
+            <div class="contatos">
+                <a href="https://www.facebook.com/?locale=pt_BR"><img src="../assets/img/instagram.svg"
+                        alt="instagram"></a>
+                <a href="https://www.facebook.com/?locale=pt_BR"><img src="../assets/img/facebook.svg"
+                        alt="facebook"></a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="contact-section">
+        <div class="contact-container">
+            <h1 class="page-title">Fale Conosco</h1>
+            <p class="subtitle">Interessado em soluções para reskilling ou tem dúvidas sobre a TalentForge? Envie sua
+                mensagem.</p>
+
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome aqui...">
+                    <div class="error-message" id="error-nome"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Digite seu email aqui...">
+                    <div class="error-message" id="error-email"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="assunto">Assunto</label>
+                    <select name="assunto" id="assunto">
+                        <option value="">Selecione um assunto</option>
+                        <option value="duvidas">Dúvidas sobre o projeto</option>
+                        <option value="parceria">Proposta de Parceria/Investimento</option>
+                        <option value="reskilling">Ajuda com Reskilling</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                    <div class="error-message" id="error-assunto"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea name="mensagem" id="mensagem" rows="5" required placeholder="Escreva sua mensagem aqui..."></textarea>
+                    <div class="error-message" id="error-mensagem"></div>
+                </div>
+
+                <button type="submit" class="submit-btn">Enviar Mensagem</button>
+                <div class="success-message" id="success-message"></div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 TalentForge. Todos os direitos reservados.</p>
+        <div class="footer-links">
+            <a href="">Início</a>
+            <a href="">Sobre o Projeto</a>
+            <a href="">Integrantes</a>
+            <a href="">Contato</a>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
