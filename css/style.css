@@ -1222,4 +1222,7 @@ header {
     .report-grid .report-card:nth-child(even) {
         border-bottom: 1px solid var(--border-subtle) !important;
     }
+      .hero-content h1 {
+        font-size: 2.8rem;
+    }
 }
