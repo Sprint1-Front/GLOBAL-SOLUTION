@@ -12,11 +12,12 @@
   <img src="https://img.shields.io/badge/Foco-Reskilling_Preditivo-b28a49" alt="Foco em Reskilling Preditivo">
 </p>
 
-<p align="center">
-  <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExajh4d3o4ZGlkNjcycW96ZGF2am11dmY2MjR6YjZydTcwN3J4OTQzZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Lul7sCgT9uU1Yf3R2Z/giphy.gif" alt="Demonstração do Projeto" width="800">
-</p>
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/0b4c74c3-daaf-4984-8f1f-e701acbe0247" alt="TalentForge Demo" width="800"/>
+</div>
 
 ---
+
 
 # 📋 **Índice**
 
