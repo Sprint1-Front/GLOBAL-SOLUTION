@@ -164,7 +164,7 @@ https://github.com/user-attachments/assets/68b95892-8df8-4139-ae78-5042dd3b224c
 
 Apresenta um link que redireciona para o assistente chat bot que te ajuda a usar o site.
 
-https://github.com/user-attachments/assets/eca319c7-f909-4cd2-b820-5c8243800b5d
+https://github.com/user-attachments/assets/cb44f67e-ec7c-466d-867d-e42b42946d7a
 
 ---
 
