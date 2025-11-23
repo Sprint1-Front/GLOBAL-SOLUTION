@@ -131,6 +131,22 @@ Apresentação completa da equipe com links para GitHub e LinkedIn.
 
 Formulário funcional com validação JavaScript e mensagens de feedback.
 
+### 🧠 **Mapa de Carreira**
+
+Página que mostra carreiras que profissões e seus riscos de automação.
+
+### 🏠 **Pagina principal(index.html)**
+
+Página principal que mostra o projeto como um todo.
+
+### ❓ **Sobre**
+
+Apresenta o que é a TalentForge e oque ela tem a oferecer.
+
+### 🤖 **Assistente IA**
+
+Apresenta um link que redireciona para o assistente chat bot que te ajuda a usar o site.
+
 ---
 
 # ✒️ **Autores**
@@ -146,7 +162,7 @@ Projeto desenvolvido para a **Global Solution 2025/2**:
 # 🔗 **Link do Repositório**
 
 <p align="center">
-  <a href="[INSIRA O LINK DO SEU REPOSITÓRIO AQUI]">
+  <a href="[INSIRA O LINK DO REPOSITÓRIO AQUI]">
     <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="Link para o Repositório no GitHub">
   </a>
 </p>
