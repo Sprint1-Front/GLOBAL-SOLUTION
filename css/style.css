@@ -346,6 +346,13 @@ header {
     color: var(--color-main);
 }
 
+.demo-screenshot {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
 /* ===================================================
     ESTILOS DA SEÇÃO DESTAQUES (FEATURES)
 =================================================== */
@@ -555,7 +562,6 @@ header {
     padding: 80px 10%;
     min-height: 70vh;
     background-color: var(--bg-primary);
-    /* GARANTE FUNDO */
 }
 
 .faq-list {
@@ -594,7 +600,6 @@ header {
     padding: 80px 10%;
     min-height: 85vh;
     background-color: var(--bg-primary);
-    /* GARANTE FUNDO */
 }
 
 .contact-container {
@@ -895,7 +900,6 @@ header {
     min-height: 85vh;
     text-align: center;
     background-color: var(--bg-primary);
-    /* GARANTE FUNDO */
 }
 
 .mapa-container {
@@ -934,7 +938,6 @@ header {
     border-bottom: 1px solid var(--border-subtle);
 }
 
-/* Remove a linha de todos os demais */
 .report-grid .report-card:nth-child(n+3) {
     border-bottom: none;
 }
@@ -1092,7 +1095,6 @@ header {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* Linhas para 2 colunas */
     .report-grid .report-card {
         border-bottom: none;
     }
@@ -1104,6 +1106,18 @@ header {
 }
 
 @media (max-width: 991px) {
+
+    .chatbot-info {
+        grid-template-columns: 1fr;
+    }
+    .access-card {
+        text-align: left;
+        padding-top: 0;
+    }
+    .btn-chatbot-access {
+        width: 100%;
+        justify-content: center;
+    }
 
     .risk-highlight-grid {
         grid-template-columns: 1fr;
@@ -1226,7 +1240,6 @@ header {
         font-size: 1rem;
     }
 
-    /* MODIFICAÇÃO RESPONSIVIDADE: Linha em todos os cartões (1 coluna) */
     .report-grid .report-card,
     .member-grid .member-card,
     .feature-grid .feature-card {
@@ -1241,6 +1254,12 @@ header {
 }
 
 @media (max-width: 600px) {
+
+    .visual-demo img {
+        width: 100%;
+        height: auto;
+    }
+
     .footer {
         padding: 20px 5%;
     }
