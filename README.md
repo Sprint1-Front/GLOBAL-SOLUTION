@@ -20,13 +20,13 @@
 
 # 📋 **Índice**
 
-1. 📖 Sobre o Projeto
-2. ✨ Funcionalidades
-3. 💻 Tecnologias
-4. 📁 Estrutura do Repositório
-5. 📄 Páginas Essenciais
-6. ✒️ Autores
-7. 🔗 GitHub
+1. 📖 **Sobre o Projeto**
+2. ✨ **Funcionalidades**
+3. 💻 **Tecnologias**
+4. 📁 **Estrutura do Repositório**
+5. 📄 **Páginas Essenciais**
+6. ✒️ **Autores**
+7. 🔗 **GitHub**
 
 ---
 
