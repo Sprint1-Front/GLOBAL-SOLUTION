@@ -181,7 +181,7 @@ Projeto desenvolvido para a **Global Solution 2025/2**:
 # 🔗 **Link do Repositório**
 
 <p align="center">
-  <a href="[INSIRA O LINK DO REPOSITÓRIO AQUI]">
+  <a href="https://github.com/Sprint1-Front/GLOBAL-SOLUTION">
     <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="Link para o Repositório no GitHub">
   </a>
 </p>
