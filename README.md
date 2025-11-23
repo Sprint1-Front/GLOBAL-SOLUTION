@@ -120,33 +120,51 @@ Janela leve, sem recarregar a página, para melhor experiência.
 
 # 📄 **Páginas Essenciais**
 
+### 🏠 **Pagina principal(index.html)**
+
+Página principal que mostra o projeto como um todo.
+
+https://github.com/user-attachments/assets/717b7279-d01a-41c0-b2f9-55662dbe472e
+
 ### 🗺️ **FAQ**
 
 Página de perguntas frequentes.
+
+https://github.com/user-attachments/assets/ee26228c-bb7d-4567-b533-8d004ead1e48
 
 ### 👤 **Integrantes**
 
 Apresentação completa da equipe com links para GitHub e LinkedIn.
 
+https://github.com/user-attachments/assets/43387ae6-0d50-4aee-99cc-f0656a459b35
+
 ### 📞 **Contato**
 
 Formulário funcional com validação JavaScript e mensagens de feedback.
 
-### 🧠 **Mapa de Carreira**
-
-Página que mostra carreiras que profissões e seus riscos de automação.
-
-### 🏠 **Pagina principal(index.html)**
-
-Página principal que mostra o projeto como um todo.
+https://github.com/user-attachments/assets/7c1cec08-c1ab-407f-ba9a-7a06d574c097
 
 ### ❓ **Sobre**
 
 Apresenta o que é a TalentForge e oque ela tem a oferecer.
 
+https://github.com/user-attachments/assets/446de204-358a-4a9e-85e2-202abbb893a8
+
+---
+
+# 📄 **Páginas Secundarias**
+
+### 🧠 **Mapa de Carreira**
+
+Página que mostra carreiras que profissões e seus riscos de automação.
+
+https://github.com/user-attachments/assets/68b95892-8df8-4139-ae78-5042dd3b224c
+
 ### 🤖 **Assistente IA**
 
 Apresenta um link que redireciona para o assistente chat bot que te ajuda a usar o site.
+
+https://github.com/user-attachments/assets/eca319c7-f909-4cd2-b820-5c8243800b5d
 
 ---
 
