@@ -42,11 +42,13 @@ body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
     transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden;
 }
 
 body {
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 a {
@@ -693,7 +695,7 @@ header {
     min-height: 80vh;
     text-align: center;
     background-color: var(--bg-primary);
-    /* GARANTE FUNDO */
+    overflow-x: hidden;
 }
 
 .team-section .subtitle {
@@ -711,7 +713,6 @@ header {
     margin: 0 auto;
 }
 
-/* MODIFICAÇÃO: Minimalista (remover borda, fundo, sombra) */
 .member-card {
     padding: 25px 0;
     background-color: transparent;
@@ -730,7 +731,6 @@ header {
     border-bottom: 1px solid var(--border-subtle);
 }
 
-/* Remove a linha de todos os demais */
 .member-grid .member-card:nth-child(n+3) {
     border-bottom: none;
 }
@@ -738,11 +738,10 @@ header {
 
 .member-photo {
     width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    max-width: 100%; 
+    height: auto;
     object-fit: cover;
     margin-bottom: 20px;
-    border: 3px solid var(--color-main);
 }
 
 .member-name {
@@ -789,7 +788,6 @@ header {
     min-height: 85vh;
     text-align: center;
     background-color: var(--bg-primary);
-    /* GARANTE FUNDO */
 }
 
 .assistant-container {
@@ -1020,6 +1018,72 @@ header {
 }
 
 /* ===================================================
+    ESTILOS DA SEÇÃO DE RISCOS EM DESTAQUE (index.html)
+=================================================== */
+
+.risk-highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto 60px auto;
+}
+
+.risk-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-subtle);
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.risk-card:hover {
+    transform: translateY(-5px);
+}
+
+.risk-card h3 {
+    font-family: var(--font-sans);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.risk-percent {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.risk-level-tag {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.foco-reskilling {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.risk-card.high .risk-percent, .risk-card.high .risk-level-tag {
+    color: #E74C3C;
+}
+
+.risk-card.medium .risk-percent, .risk-card.medium .risk-level-tag {
+    color: #f39c12;
+}
+
+.risk-card.low .risk-percent, .risk-card.low .risk-level-tag {
+    color: #27ae60;
+}
+
+/* ===================================================
     RESPONSIVIDADE (GERAL E MOBILE)
 =================================================== */
 
@@ -1040,6 +1104,11 @@ header {
 }
 
 @media (max-width: 991px) {
+
+    .risk-highlight-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 
     .btn-toggle-nav {
         display: block;
